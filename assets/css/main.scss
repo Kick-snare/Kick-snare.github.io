@@ -148,6 +148,14 @@ img {
     padding-bottom: 2rem;
 
     @include breakpoint(medium) {
+        margin-left: 2em;
+        margin-right: 2em;
+        
+        max-width: 1200px;
+        padding-top: 2.5rem;
+    }
+
+    @include breakpoint(large) {
         margin-left: auto;
         margin-right: auto;
         max-width: 1200px;
@@ -162,17 +170,17 @@ img {
 }
 
 .main {
-    padding: 0.5rem;
-
+    padding: 2rem;
+    
     @include breakpoint(medium) {
-        margin-left: 22rem;
+        margin-left: 18rem;
     }
 }
 
 .aboutme {
     @include breakpoint(medium) {
-        max-width: 30rem;
-        margin-top: 5.5rem;
+        max-width: 43rem;
+        margin: 5rem auto 2rem;
 
         img {
             float: none;
@@ -219,6 +227,9 @@ img {
    ========================================================================== */
 
 .archive {
+    
+    
+    
     color: var(--archive_font);
 
     ul {
@@ -242,12 +253,13 @@ img {
     }
 
     @include breakpoint(medium) {
-        max-width: 30rem;
-        margin-top: 5rem;
+        max-width: 36rem;
+        margin: 4rem auto;
+    
     }
 
     @include mobile-only {
-        margin-top: 2rem;
+        margin-top: 3rem;
         margin-left: 1.2rem;
         margin-right: 1.2rem;
     }
@@ -271,7 +283,7 @@ img {
 .archive_type {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .archive_year {
@@ -504,14 +516,13 @@ img {
     color: var(--post_text);
 
     @include breakpoint(medium) {
-        max-width: 33rem;
-        margin-top: 5rem;
+        max-width: 43rem;
+        margin: 5rem auto 2rem;
     }
 
     @include mobile-only {
         margin-top: 2rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+
     }
 }
 
