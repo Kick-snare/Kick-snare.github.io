@@ -24,6 +24,8 @@
 <!-- main page -->
 {% else %}
 <div class="archive">
+  <h1>Archive</h1>
+  <br />
   {% for post in site.posts %}
   {% unless post.next %}
   <p class="archive_year">{{ post.date | date: '%Y' }}</p>
