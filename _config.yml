@@ -5,21 +5,21 @@ description: >
   uzun's devlog
 
 baseurl: # the subpath of the site
-url: http://kick-snare.github.io # the base hostname & protocol for your site
+url: http://uzun.dev 
 
 permalink: /:year-:month/:title
 timezone:
 
 favicon: /assets/img/favicon.ico
 
-google_analytics: #UA—XXXXXXXX-X
-disqus_shortname: #disqus shortname
+google_analytics: G-NK2HB19ZLL
+disqus_shortname: uzun-dev.disqus.com
 
 user:
   name: uzun.dev
   pic: /assets/img/cat.jpg
   picAlt: "catbook"
-  job: a category-centric theme
+  job: wanna be dev
   aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
