@@ -3,8 +3,9 @@
   <ul class="nav_list">
     {% if site.user.aboutme %}
     <li class="nav_item">
-      <a href="{{ site.baseurl }}/aboutme.html">about</a>
+      <span style="color:#8d7edc;">· </span><a href="{{ site.baseurl }}/aboutme" style="color: blueviolet;font-weight: 600;">about</a>
     </li>
+    <br />
 
     {% endif %}
     {% for category in site.categories %}

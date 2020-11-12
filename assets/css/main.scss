@@ -465,7 +465,7 @@ img {
     @include mobile-only {
 
         &:after {
-            content: '/';
+            content: '·';
             color: var(--nav_font);
         }
 
