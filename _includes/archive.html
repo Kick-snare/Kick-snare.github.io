@@ -31,13 +31,13 @@
   <br />
   {% for post in site.posts %}
   {% unless post.next %}
-  <p class="archive_year">{{ post.date | date: '%Y' }}</p><hr style="width:41px;height:0.1px;text-align:left;margin-left:0;background-color: grey;">
+  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
   {% else %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
   <br />
   {% if year != nextyear %}
-  <p class="archive_year">{{ post.date | date: '%Y' }}</p><hr style="width:41px;height:0.1px;text-align:left;margin-left:0;background-color: grey;">
+  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
   {% endif %}
   {% endunless %}
 
