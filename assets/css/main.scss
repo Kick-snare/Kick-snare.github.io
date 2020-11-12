@@ -121,6 +121,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 
     @include breakpoint(medium) {
         zoom: 1;
@@ -147,6 +148,7 @@ img {
     border-radius: 15px;
     box-shadow: 0 0 2px 2px var(--shadow_color);
     padding-bottom: 2rem;
+    
 
     @include breakpoint(medium) {
         margin-left: 2em;
@@ -166,15 +168,19 @@ img {
     @include mobile-only {
         padding-top: 16rem;
         min-height: 75%;
-        max-width: 92%;
+        max-width: 99%;
     }
 }
 
 .main {
-    padding: 2rem;
+    
     
     @include breakpoint(medium) {
         margin-left: 18rem;
+        padding: 2rem;
+    }
+    @include mobile-only {
+        padding: 0.8rem;
     }
 }
 
