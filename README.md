@@ -1,1 +1,1 @@
-## [uzun.dev](https://uzun.dev)
+## [UZUN.DEV](https://uzun.dev)

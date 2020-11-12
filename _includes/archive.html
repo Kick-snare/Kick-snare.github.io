@@ -25,15 +25,19 @@
 {% else %}
 <div class="archive">
   <h1>Archive</h1>
+  <h3 style="color: rgb(70, 70, 70);font-weight: 540;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Titillium Web', 'Segoe UI', Roboto, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";>모든 글 보기</h3>
   <br />
   {% for post in site.posts %}
   {% unless post.next %}
-  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
+  <p class="archive_year">{{ post.date | date: '%Y' }}</p><hr style="width:41px;height:0.1px;text-align:left;margin-left:0;background-color: grey;">
   {% else %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+  <br />
   {% if year != nextyear %}
-  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
+  <p class="archive_year">{{ post.date | date: '%Y' }}</p><hr style="width:41px;height:0.1px;text-align:left;margin-left:0;background-color: grey;">
   {% endif %}
   {% endunless %}
 
