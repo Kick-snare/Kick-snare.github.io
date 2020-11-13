@@ -146,7 +146,40 @@ img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
+    &.l{float:left};
+    &.l1{float:left;width:10%;};
+    &.l2{float:left;width:20%;};
+    &.l3{float:left;width:30%;};
+    &.l4{float:left;width:40%;};
+    &.l5{float:left;width:50%;};
+    &.l6{float:left;width:60%;};
+    &.l7{float:left;width:70%;};
+    &.l8{float:left;width:80%;};
+    &.l9{float:left;width:90%;};
+    &.lf{float:left;width:100%;};
+    &.r{float:right};
+    &.r1{float:right;width:10%;};
+    &.r2{float:right;width:20%;};
+    &.r3{float:right;width:30%;};
+    &.r4{float:right;width:40%;};
+    &.r5{float:right;width:50%;};
+    &.r6{float:right;width:60%;};
+    &.r7{float:right;width:70%;};
+    &.r8{float:right;width:80%;};
+    &.r9{float:right;width:90%;};
+    &.rf{float:right;width:100%;};
+    &.c{display:block;margin:0 auto};
+    &.c2{display:block;margin:0 auto;width:20%;};
+    &.c1{display:block;margin:0 auto;width:10%;};
+    &.c3{display:block;margin:0 auto;width:30%;};
+    &.c4{display:block;margin:0 auto;width:40%;};
+    &.c5{display:block;margin:0 auto;width:50%;};
+    &.c6{display:block;margin:0 auto;width:60%;};
+    &.c7{display:block;margin:0 auto;width:70%;};
+    &.c8{display:block;margin:0 auto;width:80%;};
+    &.c9{display:block;margin:0 auto;width:90%;};
+    &.cf{display:block;margin:0 auto;width:100%;};
+}    
 
 .content {
     margin: 1.4em auto;
