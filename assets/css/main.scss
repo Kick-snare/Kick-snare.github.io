@@ -122,10 +122,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
+    
 
     @include breakpoint(medium) {
         zoom: 1;
+        
     }
+    @include mobile-only {
+        -ms-overflow-style:none;
+    }
+}
+
+body::-webkit-scrollbar { 
+    @include mobile-only { display:none; }
 }
 
 a {
@@ -171,6 +180,8 @@ img {
         max-width: 99%;
     }
 }
+
+
 
 .main {
     
