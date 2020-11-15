@@ -253,15 +253,16 @@ img + em {
         }
     
     }
-    }
 
     @include mobile-only {
         margin-top: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
-    }
+        
 
+    }
     
+}
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -762,7 +763,7 @@ hr.onlymobile {
         // border-left: 3px solid var(--blockquote);
         // margin: 10px 5px 10px 5px;
         // padding: 2px 8px 2px 8px;
-        // font-style: italic;
+        font-style: italic;
         margin-top: 2rem;
         margin-bottom: 2rem;    
         border-top-right-radius: 4px;
