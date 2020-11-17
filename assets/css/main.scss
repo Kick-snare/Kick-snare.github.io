@@ -247,19 +247,31 @@ img + em {
     @include breakpoint(medium) {
         max-width: 43rem;
         margin: 5rem auto 2rem;
-
         img {
             float: none;
         }
-    
+        
+        
     }
-
+    
     @include mobile-only {
         margin-top: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
         
+        
+    }
+    img {
+        float: none;
+        display: inline-block;
 
+    }
+    li  {
+        img{
+            border-radius: 100%;
+            width: 12%;
+            margin: 0 10px;
+        }
     }
     
 }
