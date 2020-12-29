@@ -35,6 +35,7 @@
     --border_radius: 15px;
     --acyearbg:  #fff4b4;
     --code_color: #303030;
+    --code_color2: #e9e9e9;
     --pre_color: #f7f7f7;
 }
 
@@ -56,12 +57,13 @@
     --post_h3: #fff;
     --post_link: #8d7edc;
     --post_link_hover: #D4CEF2;
-    --inlinecode_text: #c7955b;
+    --inlinecode_text: #ff8800;
     --blockquote: #464646;
     --footer_font_a: #d1d1d1;
     --border_radius: 1px;
     --acyearbg:  #27221f;
     --code_color: #303030;
+    --code_color2: #727272;
     --pre_color: #404040;
 }
 
@@ -756,7 +758,7 @@ hr.onlymobile {
         border-radius: 3px;
         font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
         font-size: .85rem;
-        background-color: var(--code_color);
+        background-color: var(--code_color2);
     }
 
 
