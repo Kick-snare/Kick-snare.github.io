@@ -36,7 +36,10 @@ defaults:
       comment: true   
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-markdown: kramdown 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+     input: GFM
 
 # Filtering Content
 show_drafts: null
