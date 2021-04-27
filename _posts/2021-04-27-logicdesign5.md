@@ -21,10 +21,10 @@ Encoder란 Decoder의 반대 역할을 하는 회로하고 생각하면 된다.
 
 ![picture 19](../images/2ab872c30f4c6419d9db23ef0ad4f6af21a7000e17b284b0d715c8c5d823a20d.png)  
 
-입력들 중 한개의 입력만 1이고 나머지는 0인 경우들을 생각해보자.
+입력들 중 한개의 입력만 1이고 나머지는 0인 경우들을 생각해보자.  
 각 입력의 첨자에 해당하는 digit 값을 binary로 바꾸어 A(3bit)를 통해 출력하는 것과 같다.
 
-입력이 8개 이므로 한개만 1인 경우 외에도 수많은 경우가 있는데,
+입력이 8개 이므로 한개만 1인 경우 외에도 수많은 경우가 있는데,  
 나머지는 제대로 encoding 되지 않으며, 할 필요가 없다.
 
 그 경우에는 출력을 don't care로 나타낸다.
@@ -33,8 +33,7 @@ Encoder란 Decoder의 반대 역할을 하는 회로하고 생각하면 된다.
 
 ![picture 20](../images/03543c2fa6eed6d0931dfd507c914eb8d15901e9ba9aa4ba5cffc945dcee150c.png)  
 
-위에서 말한 한개의 입력만 1인 경우 외 othes를 고려하기 위해서는  
-Priority Encoder를 사용하면 된다.
+위에서 말한 한개의 입력만 1인 경우 외 othes를 고려하기 위해서는 Priority Encoder를 사용하면 된다.
 
 이는 1을 갖는 단 한개의 입력을 우선적으로 고려하여 그 첨자에 맞는 binary로 출력한다.  
 나머지는 어떠한 경우가 오던 don't care로 생각하는 것이다.
@@ -59,7 +58,7 @@ Multiplexer
 ---
 ---
 Multiplexer란?  
-2^n개의 data input들 중 n개의 selector input으로 1가지를 골라서 출력하는 회로이다.
+2^n개의 data input들 중 n개의 selector input으로 1가지를 골라서 출력하는 회로이다.  
 sector가 어떤 input을 출력할지 고른다.
 
 ![picture 23](../images/62917a9fb57e3dfcad4c49a29b9c500982a87720e7f059d7d10c406713d8739a.png)
@@ -89,7 +88,7 @@ Enable 입력(selector)를 입력으로 하고 data inputs를 출력으로 나�
 위 *Quad 4 to 1 Line Multiflexer*는 일반 4to1 MUX의 형태와 유사하지만,
 4bit - vector의 형태이다.
 
-입력값 *I0 ~ I1*는 각각 4비트의 멀티비트를 가지는 vector이다.
+입력값 *I0 ~ I1*는 각각 4비트의 멀티비트를 가지는 vector이다.  
 그러므로 각 비트에 따라 4번의 연산 과정을 가지고 4개의 출력을 가지는 것이다.
 
 selector는 동일하다.
@@ -148,7 +147,7 @@ X와 Y가 같은 경우에 따라, Z의 조합과 출력 값의 조합을 보아
 이도 당연히 MUX로 구현 가능하며, BCD를 selector, 7표시부를 data input으로 두는 것이다.
 
 ![picture 34](../images/71f723642d5243ecbec53b7b2fd6966873cc86f4b551404055ced61fbe4d761f.png)  
-마찬가지로 selector 4비트중 하나를 data input으로 넣어 표현해버리면 더욱 싼 비용의 회로를 설계할 수 있다.
+마찬가지로 selector 4 비트중 하나를 data input으로 넣어 표현해버리면 더욱 싼 비용의 회로를 설계할 수 있다.
 
 
 
