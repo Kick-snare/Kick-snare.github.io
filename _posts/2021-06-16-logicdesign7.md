@@ -90,7 +90,7 @@ Flip-Flop은 Latch에 비해 구조가 훨씬 복잡해 보인다. 입력으로 
 
 ![picture 10](../images/690998df6241ee3376bf6cb0a0d413206bf794fc2be3ba43f14564e7b8af8403.png)
 *Timing diagram of clock pules* 
-Clock 입력은 주기성을 가지는 입력이다. 위와 같이 주기적으로 신호를 주며 사이클마다 0과 1이 빈복된다.  
+Clock 입력은 주기성을 가지는 입력이다. 위와 같이 주기적으로 신호를 주며 사이클마다 0과 1이 반복된다.  
 Flip-Flop을 이해하기 위해 clock pulse에 따른 내부 값들의 시간에 따른 변화를 살펴 볼 필요가 있다.
 
 ![picture 14](../images/98f0c7e125a114a6cc53b1e1eb30d9bb109ecce58b8c42fcaad208c450a45661.png)  
@@ -196,4 +196,4 @@ X의 입력에 따라 2차원으로 상태표를 더 간단하게 나타내 볼 
 이번 포스팅에서는 Storage element Latch와 Flip-Flop 그리고 순차회로 State Transition Machine에 관하여 알아보았다.
 다음 포스팅에서는 FSM에 관하여 알아보도록 하자.
 
-**[[Logic Design - 8]](../2021-04/logicdesign8)에 계속↗**
+**[[Logic Design - 8]](../2021-06/logicdesign8)에 계속↗**
