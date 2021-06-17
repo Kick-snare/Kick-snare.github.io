@@ -12,7 +12,11 @@ categories: [Subject]
 
 ---
 
-본 포스팅은 Logic and Computer Design Fundementals (Pearson, 2016)의 4장 순차회로 이후의 내용을 다루고 있다.
+*본 포스팅은 Logic and Computer Design Fundementals (Pearson, 2013)의 내용을 다루고 있습니다.*
+
+지난 포스팅까지는 계속 Combination 조합회로에 관하여 알아보았다. 이번에는 조합회로와 다른 구조와 특성을 가지는 Squential 순차회로에 관하여 알아보겠다.
+
+
 
 # Sequential Circiut
 ---

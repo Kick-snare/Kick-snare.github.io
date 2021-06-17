@@ -10,6 +10,8 @@ categories: [Subject]
 #Subject
 
 ---
+*본 포스팅은 Logic and Computer Design Fundementals (Pearson, 2013)의 내용을 다루고 있습니다.*
+
 # K-map with minterm
 ---
 K-map은 시각화된 논리회로 최소화 기법이다.
