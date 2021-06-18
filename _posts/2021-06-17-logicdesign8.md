@@ -31,7 +31,7 @@ categories: [LogicDesign]
 
 네 가지의 요소 `X` `Q` `D` `Y` 는 아래 그림과 같이 간단하게 표현할 수 있다.
 
-![picture 30](../images/43b8d7c9ce5c1632671db6aeb6f2553a02e54a401f571ebd3f39075bb5605ab0.png)  
+![picture 55](../images/4e1107670e5db34caff7624a9cf8b03c38a953c504370d984a5147011433f610.png)  
 
 여러 상태들을 그래프의 한 노드로 표현하고, 상태 천이를 Q에서 D로 향하도록 directed edge로 나타낸다.  
 그리고 그 edge 위에 입력과 출력 X,Y를 써넣는다.
