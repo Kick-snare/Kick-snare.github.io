@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Logic Design - 7
+title: 논리회로설계 [7] Latch & Flip-Flop
 comments: true
-categories: [Subject]
+categories: [LogicDesign]
 
 #Insight
 #Contest

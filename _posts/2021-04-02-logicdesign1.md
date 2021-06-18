@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Logic Design - 1
+title: 논리회로설계 [1] Introduction & Bool Algebra
 comments: true
-categories: [Subject]
+categories: [LogicDesign]
 
 #Insight
 #Contest

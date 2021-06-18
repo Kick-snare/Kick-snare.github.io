@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Logic Design - 5
+title: 논리회로설계 [5] Encoder & Multiflexer
 comments: true
-categories: [Subject]
+categories: [LogicDesign]
 
 #Insight
 #Contest

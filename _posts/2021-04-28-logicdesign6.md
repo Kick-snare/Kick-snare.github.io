@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Logic Design - 6
+title: 논리회로설계 [6] Iterative Circuits
 comments: true
-categories: [Subject]
+categories: [LogicDesign]
 
 #Insight
 #Contest

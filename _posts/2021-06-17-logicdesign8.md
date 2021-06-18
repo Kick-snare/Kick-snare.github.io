@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Logic Design - 8
+title: 논리회로설계 [8] FSM & State Assignment
 comments: true
-categories: [Subject]
+categories: [LogicDesign]
 
 #Insight
 #Contest

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Logic Design - 4
+title: 논리회로설계 [4] Decoder & Adder
 comments: true
-categories: [Subject]
+categories: [LogicDesign]
 
 #Insight
 #Contest
