@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 논리회로설계 [2] K-map with minterm & maxterm
+title: 논리회로설계 [2] K-map with Minterm & Maxterm
 comments: true
 categories: [LogicDesign]
 #Insight
