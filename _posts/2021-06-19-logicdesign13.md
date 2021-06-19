@@ -66,7 +66,10 @@ Specification에서 말한대로 레지스터 A에게 4가지의 동작을 할 �
 
 이렇게 transfer 자원을 공유하여 사용하는 것을 **Bus**라고한다.
 
-버스를 이용할 경우 mux를 한개만 사용하기 때문에 더 경제적이다. 하지만 dedicated mx에서는 `R0 ← R2`, `R1 ← R0` 와 같은 연산이 같은 clock cycle에 동시에 일어날 수 있지만 , 버스의 경우 공유된 mx를 쓰기 때문에 그렇지 못한다.
+버스를 이용할 경우 mux를 한개만 사용하기 때문에 더 경제적이다. 하지만 dedicated mx에서는 `R0 ← R2`, `R1 ← R0` 와 같이 피전달 레지스터가 다른 transfer도 동일한 clock cycle에 동시에 일어날 수 있다. Bus의 경우 공유된 mux를 쓰기 때문에 그렇지 못한다. 대신 두 레지스터에 같은 데이터를 동시에 로드하는 건 가능할 것이다.
+
+![picture 1](../images/aace5f529b9b164abac2e43ab8ee51b2d38ba94f98e82e195da32467365e1a8f.png)
+*example of register transfer using single bus*
 
 ---
 <br>
