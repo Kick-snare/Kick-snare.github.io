@@ -21,9 +21,9 @@ categories: [DataStructure]
 
 어떤 데이터 덩어리 **노드 node**를 저장할 때, 그 다음 순서의 자료가 있는 **위치를 데이터에 포함**시킨다.
 
+![picture 2](../images/a9b2a9b89f4f3b5dd160f852991269042109c9fad3fcd63fe064df730caf5b98.png)  
 
-![picture 1](../images/de15728b064263c8a4bab5f438725a847c766895e7e1f1efe543a01727b76b85.png)
-*geeksforgeeks.org*
+
 
 위와 같이 줄줄이 소세지 마냥 딸려있는 형태의 구조이며 일반적으로 **구조체**와 그 **포인터**로 구성된다.
 
@@ -31,7 +31,11 @@ categories: [DataStructure]
 ---
 단일연결리스트 Singly Linked List 란 다음 노드에 대한 참조만을 가진 단방향 연결리스트이다.
 
-![picture 2](../images/a9b2a9b89f4f3b5dd160f852991269042109c9fad3fcd63fe064df730caf5b98.png)  
+![picture 1](../images/de15728b064263c8a4bab5f438725a847c766895e7e1f1efe543a01727b76b85.png)
+*geeksforgeeks.org*
+
+노드가 다음 노드를 가르키는 형태로 연결되어있으며, 시작지점은 **Head** 라고한다.  
+마지막 노드는 연결된 존재하지 않으므로 **NULL** 값을 가르킨다.
 
 ### 구조체
 
@@ -67,7 +71,7 @@ void printLinkedList(student* node) {
 앞서 말했듯이 노드에 노드가 꼬리를 물어 리스트가 연결된다. 꼬리를 물기 위해서는 앞선 노드의 `next`가 다음 노드의 주소가 저장되면 된다.
 
 ```cpp
-void linkNode(student * node, student * newNode){
+void linkNode(student* node, student* newNode){
     
     if(!node) return;  // 1
 
@@ -193,7 +197,7 @@ void deleteNode(student* head, int id){
 ### 노드 연결
 
 ```cpp
-
+    ...
     linkNode(head, newnode);
     linkNodeByInput(head);
 
@@ -212,7 +216,7 @@ ID: 3, Grade: C
 ### 노드 삽입
 
 ```cpp
-
+    ...
     insertNode(head, 1);
     
     printLinkedList(head);
@@ -232,7 +236,7 @@ ID: 3, Grade: C
 ### 노드 제거
 
 ```cpp
-
+    ...
     deleteNode(head, 2);
     
     printLinkedList(head);
