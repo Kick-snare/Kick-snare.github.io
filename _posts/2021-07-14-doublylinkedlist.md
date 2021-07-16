@@ -81,10 +81,10 @@ void linkNode(student* node){
 
 리스트 마지막에 연결하는 것이 아닌 중간에 노드를 삽입하기 위해서는 4가지 동작이 필요할 것이다.
 
-- 삽입할려는 위치 **뒤의 노드**가 **새로운 노드**가 가르킨다.
-- 삽입할려는 위치 **앞의 노드**가 **새로운 노드**가 가르킨다.
 - **새로운 노드**가 삽입할려는 위치 **앞의 노드**를 가르킨다.
 - **새로운 노드**가 삽입할려는 위치 **뒤의 노드**를 가르킨다.
+- 삽입할려는 위치 **앞의 노드**가 **새로운 노드**가 가르킨다.
+- 삽입할려는 위치 **뒤의 노드**가 **새로운 노드**가 가르킨다.
 
 ```cpp
 void insertNode(student* node, int id){
@@ -95,10 +95,12 @@ void insertNode(student* node, int id){
     while(node){  // 2
 
         if(node->id = id){  // 3
-            node->next->before = newNode;
-            newNode->before = node;
+
             newNode->next = node->next;
+            newNode->before = node;
             node->next = newNode;
+            node->next->before = newNode;
+
             break;
         }
 
@@ -108,118 +110,45 @@ void insertNode(student* node, int id){
 ```
 1. 삽입할 노드 `newNode`를 생성하여 입력받는다.
 2. while문을 통해 리스트를 순회한다.
-3. 만약 원하는 위치 `id`를 찾으면, 앞서 말한 2가지 동작을 수행하고 반복문을 탈출한다.
+3. 만약 원하는 위치 `id`를 찾으면, 앞서 말한 4가지 동작을 수행하고 반복문을 탈출한다.
 
 ### 노드 제거
 
-노드를 제거하기 위해서는 해당노드의 앞의 노드가 해당노드가 가르키는 노드를 가르키면된다.  
-- `beforeNode->next = node->next`
+노드를 제거하기 위해서는 해당 노드의 앞과 뒤의 노드를 연결시켜주어 스킵시켜주면 된다. doubly 리스트이므로 `next`와 `before`모두 연결시켜준다.
 
-하지만 2가지 예외 케이스를 고려해야 할 것이다. 삭제하려는 노드가 **시작**이거나, **끝**인 경우이다.  
+- `deleteNode->before->next = deleteNode->next`
+- `deleteNode->next->before = deleteNode->before`
+
+하지만 싱글리스트와 마찬가지로 삭제하려는 노드가 연결리스트의 **시작**이거나, **끝**인 경우의 예외 케이스를 고려해야 할 것이다.  
+
 - 시작의 경우, head를 해당 노드의 `next`로 옮긴다.  `head = node->next`  
 - 끝인 경우, 해당 노드 앞의 노드의 `next`를 nullptr 할당한다. `beforeNode->next = nullptr`
 
 ```cpp
-void deleteNode(student* head, int id){
+void deleteNode(student* head, int id) {
 
-    student* beforeNode;  // 1 
-    student* node = head;  // 2
+    student* node = head;
 
-    while(node){  // 3
+    while(node) {
+        if (node->id == id) {
+            if (!node->before && !node->next) break; // 노드가 head 하나 밖에 없는 경우
+            
+            if (!node->before)  // head 삭제
+                *head = *node->next;
 
-        if(node->id == id){  // 4
+            else if(!node->next)  // tail 삭제
+                node->before->next = nullptr;
 
-            if(head == node)  // 5
-                head = node->next;
+            else { // 중간 노드 삭제
+                node->before->next = node->next;
+                node->next->before = node->before;
+            }
 
-            else if(node->next == nullptr)  // 5
-                beforeNode->next = nullptr;
-
-            else  // 5
-                beforeNode->next = node->next;
-
-            break;  // 5
+            break;
         }
-
-        beforeNode = next;  // 3
-        node = node->next;  // 3
+        node = node->next;
     }
 }
 ```
-1. 삭제하려는 노드의 이전 노드의 위치를 저장하기 위해 `beforeNode`를 선언한다.
-2. 리스트를 순회하기 위한 포인터를 선언한다. 시작은 `head`부터.
-3. 리스트가 끝날때까지 순회하기 위해 `beforeNode`와 `node`를 다음 노드로 이동.
-4. `node`의 id가 `id`와 일치한다면 원하는 위치의 노드를 발견한 것이다.
-5. 시작, 끝, 나머지 경우에 따라 노드를 삭제한다. 그리고 반복문을 탈출.
 
-## 예제
----
-```cpp
- int main(){
 
-     student* head = new student;
-     head->id = 1;
-     head->grade = 'A';
-
-     student* newnode;
-     newnode->id = 2;
-     newnode->grade = 'B';
-
-    }
-```
-### 노드 연결
-
-```cpp
-    ...
-    linkNode(head, newnode);
-    linkNodeByInput(head);
-
-    printLinkedList(head);
-
-```
----
-```shell
->> 3 C
-ID: 1, Grade: A
-ID: 2, Grade: B
-ID: 3, Grade: C
-
-```
-
-### 노드 삽입
-
-```cpp
-    ...
-    insertNode(head, 1);
-    
-    printLinkedList(head);
-
-```
-
----
-```shell
->> 4 D
-ID: 1, Grade: A
-ID: 4, Grade: D
-ID: 2, Grade: B
-ID: 3, Grade: C
-
-```
-
-### 노드 제거
-
-```cpp
-    ...
-    deleteNode(head, 2);
-    
-    printLinkedList(head);
-
-```
-
----
-```shell
-ID: 1, Grade: A
-ID: 4, Grade: D
-ID: 3, Grade: C
-
-```
