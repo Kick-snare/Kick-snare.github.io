@@ -565,6 +565,12 @@ hr.onlymobile {
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
+    @include mobile-only {
+        top : 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
 }
 #back-to-top::after {
     content: "\f077";
@@ -574,6 +580,10 @@ hr.onlymobile {
     font-size: 2em;
     line-height: 50px;
     color: #fff;
+    @include mobile-only {
+        content: "\f077";
+        line-height: 40px;
+    }
 }
 #back-to-top:hover {
     cursor: pointer;
