@@ -82,7 +82,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    // overflow-x: hidden;
+    overflow-x: visible;
 }
 
 html,
@@ -999,4 +999,8 @@ hr.onlymobile {
     height: 5px;
     z-index: 9000;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @include mobile-only {
+        top: 0px;
+    }
 }
