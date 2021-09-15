@@ -77,7 +77,7 @@
         } else {
             backToTop.removeClass('show');
         }
-        if(st < lastScrollTop) 
+        if(st > lastScrollTop) 
             backToTop.removeClass('show');
         lastScrollTop = st;
     });
