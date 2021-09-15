@@ -1,5 +1,6 @@
 <!-- js from https://codepen.io/MrGrigri/pen/XQmWBv -->
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/6daf59ad72.js" crossorigin="anonymous"></script>
 <script>
     const themePreference = () => {
         const hasLocalStorage = localStorage.getItem('theme');
@@ -66,4 +67,36 @@
             }
         }, false);
     }, false);
+
+    var lastScrollTop = 0;
+    var backToTop = $('#back-to-top');
+    $(window).scroll(function() {
+        var st = $(window).scrollTop()
+        if (st > $('main').height()/8) {
+            backToTop.addClass('show');
+        } else {
+            backToTop.removeClass('show');
+        }
+        if(st < lastScrollTop) 
+            backToTop.removeClass('show');
+        lastScrollTop = st;
+    });
+
+    backToTop.on('click', function(e) {
+        console.log();
+        e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+
+    var element = document.documentElement,
+        body = document.body,
+        scrollTop = 'scrollTop',
+        scrollHeight = 'scrollHeight',
+        progress = document.querySelector('.progress-bar'),
+        scroll;
+
+        document.addEventListener('scroll', function() {
+        scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+        progress.style.setProperty('--scroll', scroll + '%');
+    });
 </script>
