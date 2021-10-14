@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바 자료형 정리 (Data Types) - Primitive와 Wrapper 클래스
+title: JAVA 자바 Data Types 자료형 정리 - Primitive와 Wrapper 클래스
 comments: true
 categories: [Java]
 

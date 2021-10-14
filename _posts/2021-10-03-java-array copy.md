@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바 Array 배열 정리
+title: JAVA 자바 Array 배열 정리
 comments: true
 categories: [Java]
 

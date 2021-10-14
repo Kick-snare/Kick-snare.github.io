@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바 입출력 Input & Output 정리
+title: JAVA 자바 입출력 Input & Output 정리
 comments: true
 categories: [Java]
 

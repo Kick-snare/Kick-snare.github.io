@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바 String 문자열 클래스 정리
+title: JAVA 자바 String 문자열 클래스 정리
 comments: true
 categories: [Java]
 
